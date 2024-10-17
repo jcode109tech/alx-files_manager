@@ -2,7 +2,7 @@
 
 import express from 'express';
 import bodyParser from 'body-parser';
-import routes from './routes/index.js';
+import router from './routes/index.js';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded())
 app.use(express.json())
 
 // Routes
-app.use('/', routes);
+app.use('/', router);
 
 // Start server
 app.listen(PORT, () => {
