@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import { promises as fsPromises } from 'fs';
 import { v4 as uuid4} from 'uuid';
 import { ObjectID } from 'mongodb';

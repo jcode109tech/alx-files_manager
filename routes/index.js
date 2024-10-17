@@ -1,18 +1,16 @@
-#!/usr/bin/env node
-
 import { Router } from 'express';
-import AppController from '../controllers/AppController';
-import UserController from '../controllers/UsersController';
-import AuthController from '../controllers/AuthController';
-import FilesController from '../controllers/FilesController';
+import AppController from '../controllers/AppController.js';
+import UsersController from '../controllers/UsersController.js/index.js';
+import AuthController from '../controllers/AuthController.js';
+import FilesController from '../controllers/FilesController.js/index.js';
 
 const router = Router();
 
 // Define routes
 router.get('/status', AppController.getStatus);
 router.get('/stats', AppController.getStats);
-router.post('/users', UserController.postNew);
-router.get('/users/me', UserController.getMe);
+router.post('/users', UsersController.postNew);
+router.get('/users/me', UsersController.getMe);
 router.get('/connect', AuthController.getConnect);
 router.get('/disconnect', AuthController.getDisconnect);
 router.post('/files', FilesController.postUpload);
